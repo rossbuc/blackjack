@@ -4,4 +4,6 @@ fun main(args: Array<String>) {
     val jerry = Dealer("Jerry")
     jerry.hit()
     jerry.deal()
+    val game1 = Game()
+    game1.dealCard()
 }
