@@ -1,2 +1,2 @@
-class Card(name: String, value: Int, suit: Suit) {
+class Card(val name: String, val value: Int, val suit: Suit) {
 }

@@ -53,11 +53,20 @@ class Game {
         Card("3", 3, Suit.SPADES),
         Card("2", 2, Suit.SPADES),
     )
-    val winner: Player? = null
+    var winner: Player? = null
 
 
-    fun compareHands() {
+    fun compareHands(player: Player, dealer: Dealer): Player? {
 //        compare hands logic here
-        println("The winner is...")
+        val playerScore = player.hand.sumOf { card: Card -> card.value }
+        val dealerScore = dealer.hand.sumOf { card: Card -> card.value }
+
+        when {
+            playerScore > dealerScore -> this.winner = player
+            playerScore < dealerScore -> this.winner = dealer
+            else -> println("It's a draw")
+        }
+
+        return winner
     }
 }
