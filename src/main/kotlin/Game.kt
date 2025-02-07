@@ -55,12 +55,7 @@ class Game {
     )
     val winner: Player? = null
 
-    fun dealCard(): Card {
-//        Write some tests to confirm the size of the deck is one less than before dealCard is called
-        val randomIndex = (0..deck.size).shuffled().first()
-        println("The index of the card chosen: $randomIndex")
-        return deck.removeAt(randomIndex)
-    }
+
     fun compareHands() {
 //        compare hands logic here
         println("The winner is...")
